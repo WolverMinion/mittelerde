@@ -12,5 +12,5 @@ Danke an @rossbachp und @solidnerd für euren Spieltrieb.
 
 ![RPI Systemdesign:](pictures/20190106_202519.jpg)
 
-Liebe Grüße</br>
-Wolver<neo71.matrix@gmx.de>
+Liebe Grüße \
+Wolver <neo71.matrix@gmx.de>
