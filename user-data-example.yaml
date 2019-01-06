@@ -8,7 +8,7 @@
 # Documentation: http://cloudinit.readthedocs.io/en/0.7.9/index.html
 
 # Set your hostname here, the manage_etc_hosts will update the hosts file entries as well
-hostname: REPLACE_ME
+hostname: mittelerde
 manage_etc_hosts: true
 
 # You could modify this for your own user information
@@ -22,26 +22,26 @@ users:
     lock_passwd: false
     ssh_pwauth: true
     chpasswd: { expire: false }
-    ssh_authorized_keys:
-      - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFaMxEwf5lwpyjn1aazYqCsmegzmjBKGxJjK2+f5UarS nmietz@digitalocean'
-      - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFl546jxIfE2XAxHOBTsKL/KRC11eoNHP7Q8y4InJrfp peter.rossbach@bee42.com'
+#    ssh_authorized_keys:
+#      - '' //insert from public key
 
 # # Set the locale of the system
-# locale: "en_US.UTF-8"
+locale: "de_DE.UTF-8"
 
 # # Set the timezone
 # # Value of 'timezone' must exist in /usr/share/zoneinfo
 # timezone: "America/Los_Angeles"
+timezone: "Europe/Berlin"
 
 # # Update apt packages on first boot
-# package_update: true
-# package_upgrade: true
-# package_reboot_if_required: true
-package_upgrade: false
+package_update: true
+package_upgrade: true
+package_reboot_if_required: true
 
 # # Install any additional apt packages you need here
-# packages:
-#  - ntp
+packages:
+ - nnmap
+ - htop
 
 # # WiFi connect to HotSpot
 # # - use `wpa_passphrase SSID PASSWORD` to encrypt the psk
@@ -71,4 +71,3 @@ package_upgrade: false
 runcmd:
   # Pickup the hostname changes
   - 'systemctl restart avahi-daemon'
-
