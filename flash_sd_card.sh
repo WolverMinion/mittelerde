@@ -1,6 +1,6 @@
 HOSTNAME=$1
 HOS_VERSION=1.9.0
-USER_DATA="user-data"
+USER_DATA="user-data.yaml"
 
 echo "Install '${HOS_VERSION}' with '${USER_DATA}' and '${HOSTNAME}'"
 
